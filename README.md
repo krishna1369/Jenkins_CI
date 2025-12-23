@@ -1,25 +1,20 @@
-# Prerequisites
-#
-- JDK 17 or 21
-- Maven 3.9
-- MySQL 8
-
-# Technologies 
-- Spring MVC
-- Spring Security
-- Spring Data JPA
-- Maven
-- JSP
-- Tomcat
-- MySQL
-- Memcached
-- Rabbitmq
-- ElasticSearch
-# Database
-Here,we used Mysql DB 
-sql dump file:
-- /src/main/resources/db_backup.sql
-- db_backup.sql file is a mysql dump file.we have to import this dump to mysql db server
-- > mysql -u <user_name> -p accounts < db_backup.sql
+#Steps 
+1. Login to AWS Account
+2. Create key pair
+3. Create Security Group
+     a. Jenkins, Nexus & Sonarqube
+4. Create Ec2 Instances with userdata
+     a. Jenkins, Nexus & Sonarqube
+5. Post Installation
+     a. Jenkins setup & plugins
+     b. Nexus setup & repository setup
+     c. Soanrqube login test
+6. Git
+     a. Integrate github repo with VsCode and test it
+7. Build job with Nexus integration
+8. Github Webhook
+9. Sonarqube server integration stage
+10. Nexus Artifact upload stage
+11. Slack Notification
 
 
