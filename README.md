@@ -70,7 +70,12 @@ Host github.com-krishna1369
   IdentityFile ~/.ssh/krishna1369
   HostName github.com
 ```
-4.  
+4.  Go to the respect directory & clone it
+```bash
+git clone git@github.com-krishna1369:krishna1369/Jenkins-CI.git
+```
+5. Commit & push the changes.
+
 
 
 
