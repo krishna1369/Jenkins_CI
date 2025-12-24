@@ -45,6 +45,33 @@ sonar - port 80 ( through jenkins sg)
 6. Build Timestamp,
 7. Pipeline: Stage View
 
+### nexus Repository:
+username: admin
+
+Repository => Respositories => create Repository => 
+1. Maven2(hosted) => Name:vprofile-release => Create Repository
+2. Maven2(proxy) => Name:vpro-maven-central(download dependencies & stores) => create Repository
+3. Maven2(hosted) => Name:vprofile-snapshot => version policy: snapshot => Create Repository
+4. Maven2(group) => Name:vpro-maven-group => selected members(vpro-maven-central, vprofile-release, vprofile-snapshot)
+
+
+### SonarQube Code Quality:
+default
+username: admin
+password: admin
+
+## 6.GitHub & VS code Integration:
+1. Generate ssh key using ssh-keygen
+2. Provide a public key in the github(settings/ssh & gpg keys)
+3. In local path: ~/.ssh => vim config 
+```bash
+Host github.com-krishna1369
+  User git
+  IdentityFile ~/.ssh/krishna1369
+  HostName github.com
+```
+4.  
+
 
 
 
