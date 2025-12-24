@@ -1,4 +1,4 @@
-#Steps 
+# Steps 
 1. Login to AWS Account
 2. Create key pair
 3. Create Security Group
@@ -18,7 +18,7 @@
 11. Slack Notification
 
 
-## Create Security Groups
+## 3.Create Security Groups
 ### Jenkins SG
 ssh - Port 22,
 Jenkins - port 8080,
@@ -35,7 +35,7 @@ sonarqube - port 80 (through my ip),
 sonar - port 80 ( through jenkins sg)
 
 
-## Post Installation:
+## 5.Post Installation:
 ### Jenkins plugins
 1. Maven Integration,
 2. Github Integration,
@@ -45,7 +45,7 @@ sonar - port 80 ( through jenkins sg)
 6. Build Timestamp,
 7. Pipeline: Stage View
 
-### nexus Repository:
+### 10.nexus Repository:
 username: admin
 
 Repository => Respositories => create Repository => 
@@ -58,7 +58,7 @@ Repository => Respositories => create Repository =>
 Browse => vrofile-release => QA/vproapp/{build_id}_{yyyy_MM_dd_HHMM}
 
 
-### SonarQube Code Quality:
+### 9.SonarQube Code Quality:
 default
 username: admin
 password: admin
@@ -109,13 +109,13 @@ Build Timestamp => pattern:yyyy_MM_dd_HHmm => save
 workspace:vprofilecicd => credential:slacktoken => default channel:#jenkinscicd => save
 
 
-## Githubwebhook
+## 8.Githubwebhook
 Repo's settings => Webhook => Payload url:http://pub_ip/github-webhook/ => content type:application/json => event/trigger:just the push event => Add webhook
 
 Jenkins server => Pipeline => Build trigger: github hook trigger for Gitscm polling => save
 
 
-## Slack
+## 11.Slack
 Create a workspace => vprofilecicd => devopscicd(team) => mail:bmk136912@gmail.com(add teammates) => channel:jenkinscicd 
 
 Add Apps => Jenkins CI => channel:jenkinscicd => 
