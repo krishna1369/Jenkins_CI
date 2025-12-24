@@ -2,15 +2,15 @@
 1. Login to AWS Account
 2. Create key pair
 3. Create Security Group
-     a. Jenkins, Nexus & Sonarqube
+     - Jenkins, Nexus & Sonarqube
 4. Create Ec2 Instances with userdata
-     a. Jenkins, Nexus & Sonarqube
+     - Jenkins, Nexus & Sonarqube
 5. Post Installation
-     a. Jenkins setup & plugins
-     b. Nexus setup & repository setup
-     c. Soanrqube login test
+     - Jenkins setup & plugins
+     - Nexus setup & repository setup
+     - Soanrqube login test
 6. Git
-     a. Integrate github repo with VsCode and test it
+     - Integrate github repo with VsCode and test it
 7. Build job with Nexus integration
 8. Github Webhook
 9. Sonarqube server integration stage
@@ -20,19 +20,19 @@
 
 ## 3.Create Security Groups
 ### Jenkins SG
-ssh - Port 22,
-Jenkins - port 8080,
-Nexus - port 8080(through nexus to jenkins)
+- ssh - Port 22,
+- Jenkins - port 8080,
+- Nexus - port 8080(through nexus to jenkins)
 
 ### Nexus 
-ssh - port 22,
-Nexus - port 8081( through my ip),
-nexus - port 8081( through jenkins sg)
+- ssh - port 22,
+- Nexus - port 8081( through my ip),
+- nexus - port 8081( through jenkins sg)
 
 ### Sonar (port 9000)
-ssh - port 22,
-sonarqube - port 80 (through my ip),
-sonar - port 80 ( through jenkins sg)
+- ssh - port 22,
+- sonarqube - port 80 (through my ip),
+- sonar - port 80 ( through jenkins sg)
 
 
 ## 5.Post Installation:
@@ -59,7 +59,7 @@ Browse => vrofile-release => QA/vproapp/{build_id}_{yyyy_MM_dd_HHMM}
 
 
 ### 9.SonarQube Code Quality:
-default
+- default
 username: admin
 password: admin
 
@@ -91,9 +91,9 @@ git clone git@github.com-krishna1369:krishna1369/Jenkins-CI.git
 
 ### Tools & Credentials(Jenkins):
 #### Tools:
-Add JDK => Name:JDK17 => JAVA_HOME:/usr/lib/jvm/java-1.17.0-openjdk-amd64
-Add Maven => Name:MAVEN3.9 => 3.9.9
-Add SonarQube Scanner => Name:sonarscanner => SonarQube Scanner 4.7.0.2747
+- Add JDK => Name:JDK17 => JAVA_HOME:/usr/lib/jvm/java-1.17.0-openjdk-amd64
+- Add Maven => Name:MAVEN3.9 => 3.9.9
+- Add SonarQube Scanner => Name:sonarscanner => SonarQube Scanner 4.7.0.2747
 
 #### Credentials:
 1. Nexus(username with password)
@@ -101,8 +101,8 @@ Add SonarQube Scanner => Name:sonarscanner => SonarQube Scanner 4.7.0.2747
 3. Slack(secret text)
 
 #### System
-SonarQube servers => Env => Name:sonarserver => Server URL:http://private_IP => save
-Build Timestamp => pattern:yyyy_MM_dd_HHmm => save
+- SonarQube servers => Env => Name:sonarserver => Server URL:http://private_IP => save
+- Build Timestamp => pattern:yyyy_MM_dd_HHmm => save
 
 
 #### Configuration
@@ -110,12 +110,12 @@ workspace:vprofilecicd => credential:slacktoken => default channel:#jenkinscicd 
 
 
 ## 8.Githubwebhook
-Repo's settings => Webhook => Payload url:http://pub_ip/github-webhook/ => content type:application/json => event/trigger:just the push event => Add webhook
+- Repo's settings => Webhook => Payload url:http://pub_ip/github-webhook/ => content type:application/json => event/trigger:just the push event => Add webhook
 
-Jenkins server => Pipeline => Build trigger: github hook trigger for Gitscm polling => save
+- Jenkins server => Pipeline => Build trigger: github hook trigger for Gitscm polling => save
 
 
 ## 11.Slack
-Create a workspace => vprofilecicd => devopscicd(team) => mail:bmk136912@gmail.com(add teammates) => channel:jenkinscicd 
+- Create a workspace => vprofilecicd => devopscicd(team) => mail:bmk136912@gmail.com(add teammates) => channel:jenkinscicd 
 
-Add Apps => Jenkins CI => channel:jenkinscicd => 
+- Add Apps => Jenkins CI => channel:jenkinscicd => 
