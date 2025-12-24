@@ -96,8 +96,8 @@ git clone git@github.com-krishna1369:krishna1369/Jenkins-CI.git
 - Add SonarQube Scanner => Name:sonarscanner => SonarQube Scanner 4.7.0.2747
 
 #### Credentials:
-1. Nexus(username with password)
-2. SonarQube(secret text)
+1. Nexus(username with password) => ID:nexuslogin
+2. SonarQube(secret text) => ID:sonarserver
 3. Slack(secret text)
 
 #### System
