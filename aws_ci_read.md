@@ -1,8 +1,8 @@
 # Continuous Integration (CI) on AWS Cloud:
 1. Bitbucket
-    a. Create account & repository on bitbucket
-    b. SSH authentication from local to bitbucket account
-    c. Migrate vprofile project source code from github to bitbucket
+    - Create account & repository on bitbucket
+    - SSH authentication from local to bitbucket account
+    - Migrate vprofile project source code from github to bitbucket
 2. Code Artifact
     a. Create code artifact respository
     b. Look at the settings for pom.xml & settings.xml
@@ -26,3 +26,23 @@
     a. Create SNS notifications
     b. Create aws codepipeline
     c. Execute & test
+
+
+# Continuous Delivery
+#### Steps
+1. Update github webhook with new jenkins ip
+2. Copy Docker files from vprofile repo to our repo
+3. Prepare two seprate jenkinsfile for staging & prod in source code
+4. AWS steps
+   a. IAM, ECR Repo setup
+5. Jenkins Steps
+   a. Install Plugins
+       i. Amazon ecr
+       ii. Docker, Docker build & publish
+       iii. Pipeline: aws steps
+6. Install docker engine & awscli on jenkins
+7. Write Jenkins for Build & publish image to ECR
+8. ECS setup
+   Cluster, task definition, Service
+9. Code for Deploy Docker image to ECS
+10. Repeat the steps for ECS cluster
