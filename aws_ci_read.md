@@ -46,3 +46,4 @@
     - Cluster, task definition, Service
 9. Code for Deploy Docker image to ECS
 10. Repeat the steps for ECS cluster
+11. Promoting docker image for prod
