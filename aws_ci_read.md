@@ -4,28 +4,28 @@
     - SSH authentication from local to bitbucket account
     - Migrate vprofile project source code from github to bitbucket
 2. Code Artifact
-    a. Create code artifact respository
-    b. Look at the settings for pom.xml & settings.xml
-    c. Understand buildspec.yml file for code analysis build job
+   - Create code artifact respository
+   - Look at the settings for pom.xml & settings.xml
+   - Understand buildspec.yml file for code analysis build job
 3. Sonar cloud setup
-    a. Create account and set project details
+   - Create account and set project details
 4. Parameter store
-    a. Store sonar cloud details into parameter store
-    b. mention parameter store details in buildspec.yml file
+    - Store sonar cloud details into parameter store
+   -  mention parameter store details in buildspec.yml file
 5. AWS Code build job
-    a. Understand buildspec.yml file for code build job
-    b. Update pom.xml & settings.xml for code artifact repo detail
-    c. Create a Build job for sonar code analysis
-    d. Execute & Test
+    - Understand buildspec.yml file for code build job
+   - Update pom.xml & settings.xml for code artifact repo detail
+     - Create a Build job for sonar code analysis
+    - Execute & Test
 6. Build job for artifact
-    a. Understand buildspec.yml file
-    b. Create s3 bucket for artifact storage
-    c. Create AWS code build job
-    d. Execute & test
+    - Understand buildspec.yml file
+- Create s3 bucket for artifact storage
+    - Create AWS code build job
+  - Execute & test
 7. Code Pipeline 
-    a. Create SNS notifications
-    b. Create aws codepipeline
-    c. Execute & test
+    - Create SNS notifications
+    - Create aws codepipeline
+      - Execute & test
 
 
 # Continuous Delivery
